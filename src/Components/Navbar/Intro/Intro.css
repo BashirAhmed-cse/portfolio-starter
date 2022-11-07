@@ -79,7 +79,7 @@
 }
 .yellow-boy
 {
-    height: 425px;
+    height: 410px;
 }
 
 .i-buton
@@ -93,8 +93,9 @@
   height: 14rem;
   border-radius: 50%;
   background: #edd0ff;
-  filter: blur(212px);
+  
     z-index: -9;
     top:18%;
     left: 56%;
+    filter: blur(72px);
 }
