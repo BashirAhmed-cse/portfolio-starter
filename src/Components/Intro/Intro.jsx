@@ -1,21 +1,25 @@
 import React from "react";
 import "./Intro.css";
-import Github from "../../../img/github.png";
-import LinkedIn from "../../../img/linkedin.png";
-import Instagram from "../../../img/instagram.png";
-import Vector1 from "../../../img/Vector1.png";
-import Vector2 from "../../../img/Vector2.png";
-import Boy from "../../../img/boy.png";
-import Crown from "../../../img/crown.png";
-import glassesimoji from "../../../img/glassesimoji.png";
+import Github from "../../img/github.png";
+import LinkedIn from "../../img/linkedin.png";
+import Instagram from "../../img/instagram.png";
+import Vector1 from "../../img/Vector1.png";
+import Vector2 from "../../img/Vector2.png";
+import Boy from "../../img/boy.png";
+import Crown from "../../img/crown.png";
+import glassesimoji from "../../img/glassesimoji.png";
+import {themeContext} from '../../Context'
+import { useContext } from "react";
 const Intro = () => {
+  const theme = useContext (themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="intro">
       <div className="i-left">
         <div className="i-name">
-          <span>Hy! I Am</span>
+          <span style={{color: darkMode? 'white':''}}>Hy! I Am</span>
           <span>Bashir Ahmed</span>
-          <span>
+          <span style={{color: darkMode? 'white':''}}>
             Frontend Developer with high level of experience in web designing
             and development, protecting the Quality work
           </span>

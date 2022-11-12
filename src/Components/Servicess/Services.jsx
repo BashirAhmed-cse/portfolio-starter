@@ -6,15 +6,20 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Card from "../Cards/Card";
 import Resume from '../../img/CV_Bashir_Ahmed.pdf'
+import {themeContext} from '../../Context'
+import { useContext } from "react";
 
 const Services = () => {
+
+  const theme = useContext (themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="services">
       {/*left side*/}
       <div className="awesome">
-        <span>My Awesome</span>
+        <span style={{color: darkMode? 'white':''}}>My Awesome</span>
         <span>Servicess</span>
-        <span>
+        <span style={{color: darkMode? 'white':''}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
           <br />

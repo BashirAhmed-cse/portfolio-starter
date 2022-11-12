@@ -5,14 +5,18 @@ import Fiverr from "../../img/fiverr.png"
 import Facebook from "../../img/Facebook.png"
 import Shopify from "../../img/Shopify.png"
 import Amazon from "../../img/amazon.png"
+import {themeContext} from '../../Context'
+import { useContext } from "react";
 const Works = () => {
+  const theme = useContext (themeContext);
+  const darkMode = theme.state.darkMode;
   return (
    <div className="works">
        {/*left side*/}
        <div className="awesome">
-        <span>Works for All these</span>
+        <span style={{color: darkMode? 'white':''}}>Works for All these</span>
         <span>Brands & Clients</span>
-        <span>
+        <span style={{color: darkMode? 'white':''}}>
           Lorem Ipsum is simply dummy text of the printing 
           industry.
           <br />
